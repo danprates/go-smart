@@ -1,6 +1,7 @@
 {
   "name": "go-smart",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "docker-compose up"
   },
