@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  api:
+    image: node:12-alpine
+    container_name: startup-one-api
+    depends_on:
+      - mongodb
+    networks:
+      - base
+    volumes:
+      - ./packages/api:/app
+    ports:
+      - "3000:3000"
+    working_dir: '/app'
+    command: sh -c 'npm i && npm run dev'
+
+  web:
+    image: node:12-alpine
+    container_name: startup-one-web
+    networks:
+      - base
+    volumes:
+      - ./packages/web:/app
+    ports:
+      - "80:8080"
+    working_dir: '/app'
+    command: sh -c 'npm i && npm rebuild node-sass && npm run serve'
+
+  mongodb:
+    image: mongo
+    container_name: startup-one-db
+    networks:
+    networks:
+      - base
+    ports:
+      - "27017:27017"
+    volumes:
+      - db-mongo:/data/db
+
+networks:
+  base:
+
+volumes:
+  db-mongo:

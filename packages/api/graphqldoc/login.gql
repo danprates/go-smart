@@ -1,0 +1,24 @@
+mutation {
+  login(email:"paulork07@gmail.com", password:"1234") {
+    user {
+      name,
+      email,
+      nickname
+    },
+    token
+  }
+}
+
+// header
+{
+  "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNmU5ZjFjZjdkNDU4MDYzZGJlY2ZjMCIsIm5hbWUiOiJQYXVsbyBIZW5yaXF1ZSBQZXJlaXJhIGRvcyBSZWlzIiwiaWF0IjoxNTY3NTMyOTc5fQ.P8QXKlZ8p6itdzPzRdDmjRawTeFs4gRoLWAl70SvB6g"
+}
+
+query {
+  users { 
+    data {
+      name,
+      nickname
+    }
+  }
+}	

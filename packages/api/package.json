@@ -1,0 +1,51 @@
+{
+  "name": "go-smart-api",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Daniel Prates <danprates94@gmail.com>",
+  "contributors": [
+    {
+      "name": "Paulo Henrique",
+      "email": "paulork07@gmail.com"
+    }
+  ],
+  "homepage": "",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.9.0",
+    "apollo-server-express": "^2.9.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto-js": "^3.1.9-1",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "express-jwt": "^5.3.1",
+    "graphql": "^14.5.3",
+    "graphql-scalars": "^1.0.1",
+    "ibm-watson": "^4.4.0",
+    "merge-graphql-schemas": "^1.7.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.9",
+    "multer": "^1.4.2",
+    "nedb": "^1.8.0",
+    "storkjs": "^1.0.4",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  }
+}
